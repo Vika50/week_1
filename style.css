@@ -1,0 +1,190 @@
+body {
+    min-width: 800px;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    background: white;
+}
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+.layout-positioner {
+    width: 800px;
+    margin: 0 auto;
+    border: 2px dashed #3498db;
+}
+.layout-positioner::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+.header {
+    background: #882ea0;
+    min-height: 150px; 
+    width: auto;
+}
+.header .logo {
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 20px;
+}
+.header .forma {
+    width: 400px;
+    min-height: 60px;
+    float: right;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+.header .forma .input {
+    width: 50%;
+    float: left;
+    margin: 0;
+}
+
+.header .forma input[type=e-mail],
+.header .forma input[type=password] {
+    font-size: 12px;
+    display: block;
+    width: 180px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 2px solid #ebe6e2;
+    border-radius: 3px;
+}
+
+.header .forma input[type=e-mail]:hover,
+.header .forma input[type=password]:hover {
+    border-color: #CCC;
+}
+.header .forma input[type=e-mail]:focus,
+.header .forma input[type=password]:focus {
+    border-color: grey;
+    outline: none; 
+}
+
+.header .forma input[type=e-mail]::-webkit-input-placeholder,
+.header .forma input[type=password]::-webkit-input-placeholder
+{ 
+    opacity: 0.3; 
+}
+
+.header .forma .submit {
+    display: inline-block;
+    margin: 0;
+    margin-left: 10px;
+}
+.header .forma input[type=submit]:hover
+{
+    border-color: red;
+}
+
+.header .forma input[type=submit]{
+    width: 180px;
+    height: 30px;
+    float: left;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 3px;
+    margin-left: 5px;
+    border: 2px solid #ebe6e2;
+    color: white;
+    background: Crimson;
+}
+
+.header .menu { 
+    margin-top: 100px;
+    padding: 5px;
+    list-style: none;
+}
+.header .menu li {
+    display: inline-block;
+    margin-right: 50px;
+    white-space: nowrap;    
+}
+.header .menu a {
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    
+}
+.header .menu .active a {
+    color: Crimson;
+    border-bottom: 2px solid Crimson;
+}
+.header .menu a:hover {
+    color: red;
+}
+
+.side_bar {
+    position: relative;
+    margin-top: 50px;
+    margin-right: 240px;
+    width: 250px;
+    float: right;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    border: 2px solid #CCCCCC;
+}
+.side_bar a{
+    color: mediumblue;
+    line-height: 2;
+    font-size: 16px;
+    font-style: italic;
+    text-decoration: none;
+}
+.side_bar a:visited{
+    color: #882ea0;
+}
+.side_bar a:active{
+    border-bottom: 1px solid black;
+}
+.content {
+    position: absolute;
+    top: 150px;
+    left: 230px;
+    width: 460px;
+    float: left;
+    min-height: 400px;
+    padding: 15px;
+}
+.content h1{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    color: green;
+}
+.content p {
+    text-align: justify;
+}
+.content ul {
+    list-style-type: circle;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    clear: both;
+    background-color: #882ea0;
+    color: white;
+    padding: 10px 20px 10px 60px;
+}
+.content .image {
+    width: 200px;
+    margin: 0 auto;
+}
