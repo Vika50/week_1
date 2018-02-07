@@ -1,45 +1,34 @@
-body {
-    min-width: 800px;
-    min-height: 100%;
-    margin: 0;
+*{
     padding: 0;
-    font-family: "PT Sans", sans-serif;
-    font-size: 14px;
-    background: white;
+    margin: 0;
 }
-.clearfix::after {
-    display: table;
-    content: "";
-    clear: both;
+body{
+    background: #f5f5f5;
+    font: 100% Arial;
+    color: 555;
+    line-height: 1.3;
 }
-.layout-positioner {
-    width: 800px;
+.layout-positioner{
+    width: 70%;
     margin: 0 auto;
-    border: 2px dashed #3498db;
 }
-.layout-positioner::after {
-    display: table;
-    content: "";
-    clear: both;
+.header{
+    padding: 30px 0 0 0;
+    margin-bottom: 20px;
+    background: #8B008B;
+    overflow: hidden;
 }
-.header {
-    background: #882ea0;
-    min-height: 150px; 
-    width: auto;
-}
-.header .logo {
-    width: auto;
-    height: auto;
+.header .logo{
+    margin: 0 40px 20px 40px;
+    display: block;
     float: left;
-    margin: 20px;
 }
 .header .forma {
     width: 400px;
     min-height: 60px;
     float: right;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
+    margin-bottom: 20px;
+    padding-right: 30px;
     color: white;
 }
 .header .forma .input {
@@ -100,41 +89,61 @@ body {
     color: white;
     background: Crimson;
 }
-
-.header .menu { 
-    margin-top: 100px;
-    padding: 5px;
+.menu{
     list-style: none;
-}
-.header .menu li {
-    display: inline-block;
-    margin-right: 50px;
-    white-space: nowrap;    
-}
-.header .menu a {
+    overflow: hidden;
     font-size: 18px;
-    display: block;
+    font-weight: bold;
+    margin-top: 100px;
+}
+.menu li{
+    float: left;
+    padding: 8px 40px;
+}
+.header li a{
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    text-align: center;
-    padding: 5px 10px;
-    
 }
-.header .menu .active a {
-    color: Crimson;
-    border-bottom: 2px solid Crimson;
+.header li a:hover{
+    border-bottom: 2px solid #FF0000;
 }
-.header .menu a:hover {
-    color: red;
+.header .active a{
+    color: #FF0000;
+    border-bottom: 2px solid #FF0000;
 }
-
-.side_bar {
-    position: relative;
-    margin-top: 50px;
-    margin-right: 240px;
-    width: 250px;
+.content{
+        overflow: hidden;
+}
+.content h1{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    color: green;
+}
+.content p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+.content img{
+    margin-bottom: 20px;
+}
+.content-left{
+    padding: 30px 30px 32000px 30px;
+    margin-bottom: -32000px;
+    width: 520px;
+    float: left;
+}
+.content ul{
+    margin: 20px;
+    list-style-type: circle;
+}
+.side_bar{
+    width: 230px;
+    padding: 30px 10px 30px 25px;
     float: right;
-    padding: 10px 20px 10px 20px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 18px;
     text-align: center;
     border: 2px solid #CCCCCC;
 }
@@ -151,40 +160,22 @@ body {
 .side_bar a:active{
     border-bottom: 1px solid black;
 }
-.content {
-    position: absolute;
-    top: 150px;
-    left: 230px;
-    width: 460px;
-    float: left;
-    min-height: 400px;
-    padding: 15px;
+.footer{
+    padding: 15px 0 20px 30px;
+    color: #d8d8d9;
+    background-color: #8B008B;
 }
-.content h1{
-    font-family: "Gill Sans", sans-serif;
-    font-size: 20px;
-    font-style: italic;
-    color: green;
-}
-.content p {
-    text-align: justify;
-}
-.content ul {
-    list-style-type: circle;
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    clear: both;
-    background-color: #882ea0;
-    color: white;
-    padding: 10px 20px 10px 60px;
-}
-.content .image {
-    width: 200px;
-    margin: 0 auto;
+@media screen and (max-width: 768px){
+    .header .logo{
+        margin: 0 20px 20px 180px;
+    }
+    .menu{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 200px;
+    }  
+    .side_bar{
+    float: none;
+        margin: 0 auto;
+    }
 }
