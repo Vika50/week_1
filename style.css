@@ -9,7 +9,7 @@ body{
     line-height: 1.3;
 }
 .layout-positioner{
-    width: 70%;
+    max-width: 960px;
     margin: 0 auto;
 }
 .header{
@@ -17,6 +17,7 @@ body{
     margin-bottom: 20px;
     background: #8B008B;
     overflow: hidden;
+    min-height: 120px;
 }
 .header .logo{
     margin: 0 40px 20px 40px;
@@ -89,28 +90,44 @@ body{
     color: white;
     background: Crimson;
 }
-.menu{
-    list-style: none;
-    overflow: hidden;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 100px;
+.menu {
+    position: relative;
+    top: -65px;
+    left: 80px;
 }
-.menu li{
-    float: left;
-    padding: 8px 40px;
+.menu ul {
+	margin: 0;
+	padding: 0;
 }
-.header li a{
-    color: #ffffff;
-    text-decoration: none;
+.menu li {
+	margin: 0 15px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	*display:inline; 
 }
-.header li a:hover{
-    border-bottom: 2px solid #FF0000;
+.menu a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #fff;
+	line-height: 100%;
 }
-.header .active a{
-    color: #FF0000;
-    border-bottom: 2px solid #FF0000;
+.menu a:hover {
+	color: #FF0000;
 }
+.nav .current a {
+	background: #999;
+	color: #fff;
+	border-radius: 3px;
+}
+.menu.right ul {
+	text-align: right;
+}
+ 
+.menu.center ul {
+	text-align: center;
+}
+
 .content{
         overflow: hidden;
 }
@@ -129,9 +146,8 @@ body{
     margin-bottom: 20px;
 }
 .content-left{
-    padding: 30px 30px 32000px 30px;
-    margin-bottom: -32000px;
-    width: 520px;
+    padding: 2%;
+    width: 60%;
     float: left;
 }
 .content ul{
@@ -139,18 +155,17 @@ body{
     list-style-type: circle;
 }
 .side_bar{
-    width: 230px;
-    padding: 30px 10px 30px 25px;
+    width: 25%;
+    padding: 3%;
     float: right;
     font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     border: 2px solid #CCCCCC;
 }
 .side_bar a{
     color: mediumblue;
     line-height: 2;
-    font-size: 16px;
     font-style: italic;
     text-decoration: none;
 }
@@ -161,21 +176,78 @@ body{
     border-bottom: 1px solid black;
 }
 .footer{
-    padding: 15px 0 20px 30px;
+    padding: 2%;
     color: #d8d8d9;
     background-color: #8B008B;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     .header .logo{
-        margin: 0 20px 20px 180px;
-    }
-    .menu{
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 200px;
-    }  
-    .side_bar{
-    float: none;
         margin: 0 auto;
     }
+    .content-left{
+    padding: 2%;
+    width: 94%;
+    float: none;
+    }
+    .side_bar{
+    float: none;
+    width: 93%;
+    margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 660px){
+    .header{
+        min-height: 200px;
+    }
+    .header .logo{
+        float:none;
+        margin-bottom: 10px;
+    }
+    .header .forma{
+        float: none;
+        margin: 0 auto;
+    }
+    .menu {
+		position: relative;
+		min-height: 40px;
+        left: 20px;
+	}	
+	.menu ul {
+		width: 180px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		background: #8B008B 10px 11px;
+		border-radius: 5px;
+	}
+	.menu li {
+		display: none;
+		margin: 0;
+	}
+	.menu .current {
+		display: block;
+	}
+	.menu a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+	.menu .current a {
+		color: #fff;
+	}
+	.menu ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+	.menu.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+ 
 }
